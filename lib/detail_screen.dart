@@ -4,7 +4,7 @@ import 'package:list_motor/list_pemain.dart';
 import 'package:readmore/readmore.dart';
 
 class DetailScreen extends StatelessWidget {
-  const DetailScreen({super.key,  required this.listPemain});
+  const DetailScreen({super.key, required this.listPemain});
   final ListPemain listPemain;
 
   @override
@@ -15,7 +15,10 @@ class DetailScreen extends StatelessWidget {
           child: SingleChildScrollView(
             child: Column(
               children: <Widget>[
-                Image.asset(listPemain.image),
+                Image.asset(
+                  listPemain.image,
+                  height: 330,
+                ),
                 Padding(
                   padding: const EdgeInsets.all(10.0),
                   child: Column(
@@ -23,7 +26,10 @@ class DetailScreen extends StatelessWidget {
                       Text(
                         listPemain.nama,
                         style: TextStyle(
-                            fontSize: 24, fontWeight: FontWeight.w600),
+                          fontSize: 24,
+                          fontWeight: FontWeight.w600,
+                          fontFamily: "Lato",
+                        ),
                       ),
                     ],
                   ),
@@ -48,14 +54,16 @@ class DetailScreen extends StatelessWidget {
                                 fontSize: 17,
                                 fontWeight: FontWeight.w400,
                                 color: Colors.white,
+                                fontFamily: "Lato",
                               ),
                             ),
                             Text(
                               listPemain.age,
                               style: TextStyle(
-                                fontSize: 17,
+                                fontSize: 18,
                                 fontWeight: FontWeight.w400,
                                 color: Colors.white,
+                                fontFamily: "Ramaraja",
                               ),
                             ),
                           ],
@@ -76,14 +84,16 @@ class DetailScreen extends StatelessWidget {
                                 fontSize: 17,
                                 fontWeight: FontWeight.w400,
                                 color: Colors.white,
+                                fontFamily: "Lato",
                               ),
                             ),
                             Text(
                               listPemain.main,
                               style: TextStyle(
-                                fontSize: 17,
+                                fontSize: 18,
                                 fontWeight: FontWeight.w400,
                                 color: Colors.white,
+                                fontFamily: "Ramaraja",
                               ),
                             ),
                           ],
@@ -104,14 +114,16 @@ class DetailScreen extends StatelessWidget {
                                 fontSize: 17,
                                 fontWeight: FontWeight.w400,
                                 color: Colors.white,
+                                fontFamily: "Lato",
                               ),
                             ),
                             Text(
                               listPemain.goals,
                               style: TextStyle(
-                                fontSize: 17,
+                                fontSize: 18,
                                 fontWeight: FontWeight.w400,
                                 color: Colors.white,
+                                fontFamily: "Ramaraja",
                               ),
                             ),
                           ],
@@ -133,7 +145,8 @@ class DetailScreen extends StatelessWidget {
                       child: Text(
                         listPemain.kata,
                         style: TextStyle(
-                          fontSize: 18,
+                          fontSize: 19,
+                          fontFamily: "PlayfairDisplay",
                         ),
                       ),
                     ),
@@ -161,6 +174,7 @@ class DetailScreen extends StatelessWidget {
                                 listPemain.posisi,
                                 style: TextStyle(
                                   fontSize: 16,
+                                  fontFamily: "LibreBaskerville",
                                 ),
                               ),
                             ],
@@ -191,6 +205,7 @@ class DetailScreen extends StatelessWidget {
                                   listPemain.negara,
                                   style: TextStyle(
                                     fontSize: 16,
+                                    fontFamily: "LibreBaskerville",
                                   ),
                                 ),
                               ),
@@ -223,6 +238,7 @@ class DetailScreen extends StatelessWidget {
                               fontSize: 21,
                               color: Colors.red,
                               fontWeight: FontWeight.bold,
+                              fontFamily: "LibreBaskerville",
                             ),
                           ),
                         ],
@@ -243,6 +259,7 @@ class DetailScreen extends StatelessWidget {
                               fontSize: 21,
                               color: Colors.red,
                               fontWeight: FontWeight.bold,
+                              fontFamily: "LibreBaskerville",
                             ),
                           ),
                         ],
@@ -271,6 +288,7 @@ class DetailScreen extends StatelessWidget {
                               fontSize: 21,
                               color: Colors.red,
                               fontWeight: FontWeight.bold,
+                              fontFamily: "LibreBaskerville",
                             ),
                           ),
                         ],
@@ -291,6 +309,7 @@ class DetailScreen extends StatelessWidget {
                               fontSize: 21,
                               color: Colors.red,
                               fontWeight: FontWeight.bold,
+                              fontFamily: "LibreBaskerville",
                             ),
                           ),
                         ],
@@ -328,6 +347,7 @@ class DetailScreen extends StatelessWidget {
                             color: Colors.red,
                           ),
                           style: TextStyle(
+                            fontFamily: "LibreBaskerville",
                             fontSize: 18,
                           ),
                         ),

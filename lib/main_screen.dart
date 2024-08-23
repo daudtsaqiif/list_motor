@@ -17,6 +17,7 @@ class MainScreen extends StatelessWidget {
               color: Colors.white,
               fontWeight: FontWeight.bold,
               fontSize: 19,
+              fontFamily: "Lato",
             ),
           ),
         ),
@@ -37,52 +38,64 @@ class MainScreen extends StatelessWidget {
                 },
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Column(
-                    children: <Widget>[
-                      Container(
-                        width: 200,
-                        height: 310,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(15),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.grey,
-                              spreadRadius: 3,
-                              blurRadius: 10,
-                              offset: Offset(0, 0),
-                            ),
-                          ],
-                        ),
-                        child: Column(
+                  child: SizedBox(
+                    child: Column(
+                      children: <Widget>[
+                        Stack(
                           children: <Widget>[
                             Container(
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(10),
-                                child: Image.asset(
-                                  listPemain.image,
-                                  height: 250,
-                                ),
+                              width: 340,
+                              height: 200,
+                              decoration: BoxDecoration(
+                                color: const Color.fromARGB(255, 14, 9, 33),
+                                borderRadius: BorderRadius.circular(20),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.red,
+                                    blurRadius: 4,
+                                  ),
+                                ],
                               ),
                             ),
-                            Text(
-                              listPemain.nama,
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 18,
+                            Positioned(
+                              left: 20,
+                              top: 20,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    listPemain.nama,
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 28,
+                                      fontFamily: "Roboto",
+                                    ),
+                                  ),
+                                  Text(
+                                    listPemain.posisi,
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w700,
+                                      fontSize: 16,
+                                      fontFamily: "PlayfairDisplay",
+                                    ),
+                                  ),
+                                ],
                               ),
                             ),
-                            Text(
-                              listPemain.jersy,
-                              style: TextStyle(
-                                fontWeight: FontWeight.w700,
-                                fontSize: 16,
+                            Positioned(
+                              top: 50,
+                              left: 240,
+                              child: Image.asset(
+                                listPemain.image,
+                                height: 150,
                               ),
-                            )
+                            ),
                           ],
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
               );
