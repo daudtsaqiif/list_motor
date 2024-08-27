@@ -11,348 +11,359 @@ class DetailScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        backgroundColor: const Color.fromARGB(221, 16, 19, 41),
         body: SafeArea(
           child: SingleChildScrollView(
             child: Column(
               children: <Widget>[
-                Image.asset(
-                  listPemain.image,
-                  height: 330,
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Column(
-                    children: [
-                      Text(
-                        listPemain.nama,
-                        style: TextStyle(
-                          fontSize: 24,
-                          fontWeight: FontWeight.w600,
-                          fontFamily: "Lato",
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: <Widget>[
-                      Container(
-                        height: 50,
-                        width: 50,
-                        decoration: BoxDecoration(
-                          color: Colors.green,
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        child: Column(
-                          children: <Widget>[
-                            Text(
-                              'AGE',
-                              style: TextStyle(
-                                fontSize: 17,
-                                fontWeight: FontWeight.w400,
-                                color: Colors.white,
-                                fontFamily: "Lato",
-                              ),
-                            ),
-                            Text(
-                              listPemain.age,
-                              style: TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.w400,
-                                color: Colors.white,
-                                fontFamily: "Ramaraja",
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Container(
-                        height: 50,
-                        width: 130,
-                        decoration: BoxDecoration(
-                          color: Colors.green,
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        child: Column(
-                          children: <Widget>[
-                            Text(
-                              'APPEARANCES',
-                              style: TextStyle(
-                                fontSize: 17,
-                                fontWeight: FontWeight.w400,
-                                color: Colors.white,
-                                fontFamily: "Lato",
-                              ),
-                            ),
-                            Text(
-                              listPemain.main,
-                              style: TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.w400,
-                                color: Colors.white,
-                                fontFamily: "Ramaraja",
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      Container(
-                        height: 50,
-                        width: 120,
-                        decoration: BoxDecoration(
-                          color: Colors.green,
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        child: Column(
-                          children: <Widget>[
-                            Text(
-                              'TOTAL GOALS',
-                              style: TextStyle(
-                                fontSize: 17,
-                                fontWeight: FontWeight.w400,
-                                color: Colors.white,
-                                fontFamily: "Lato",
-                              ),
-                            ),
-                            Text(
-                              listPemain.goals,
-                              style: TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.w400,
-                                color: Colors.white,
-                                fontFamily: "Ramaraja",
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Container(
-                    height: 100,
-                    width: 400,
-                    decoration: BoxDecoration(
-                        color: Colors.grey,
-                        borderRadius: BorderRadius.circular(6)),
-                    child: Padding(
+                Row(
+                  children: [
+                    Padding(
                       padding: const EdgeInsets.all(10.0),
-                      child: Text(
-                        listPemain.kata,
-                        style: TextStyle(
-                          fontSize: 19,
-                          fontFamily: "PlayfairDisplay",
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget>[
-                      Column(
-                        children: <Widget>[
-                          Text(
-                            'POSITION',
-                            style: TextStyle(
-                              color: Colors.grey,
-                              fontSize: 17,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                          Row(
+                      child: Column(
+                        children: [
+                          Stack(
+                            clipBehavior: Clip.none,
+                            alignment: Alignment.topLeft,
                             children: [
-                              Icon(Icons.person),
-                              Text(
-                                listPemain.posisi,
-                                style: TextStyle(
-                                  fontSize: 16,
-                                  fontFamily: "LibreBaskerville",
+                              Positioned(
+                                child: Image.asset(
+                                  listPemain.secondImage,
+                                  color: const Color.fromARGB(106, 127, 68, 68),
                                 ),
                               ),
-                            ],
-                          ),
-                        ],
-                      ),
-                      Column(
-                        children: <Widget>[
-                          Text(
-                            'COUNTRY',
-                            style: TextStyle(
-                              color: Colors.grey,
-                              fontSize: 17,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                          Row(
-                            children: [
-                              CountryFlag.fromCountryCode(
-                                'pt',
-                                width: 30,
-                                height: 20,
-                                shape: Circle(),
+                              Positioned(
+                                left: 40,
+                                top: 50,
+                                child: CountryFlag.fromCountryCode(
+                                  'pt',
+                                  width: 40,
+                                  height: 20,
+                                  shape: Circle(),
+                                ),
                               ),
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
+                              Positioned(
+                                left: 5,
+                                top: 50,
+                                child: Image.asset(
+                                  listPemain.secondImage,
+                                  width: 43,
+                                ),
+                              ),
+                              Positioned(
+                                top: 100,
                                 child: Text(
-                                  listPemain.negara,
+                                  listPemain.nama,
                                   style: TextStyle(
-                                    fontSize: 16,
-                                    fontFamily: "LibreBaskerville",
+                                    fontSize: 35,
+                                    fontWeight: FontWeight.bold,
+                                    fontFamily: "Lato",
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                              Positioned(
+                                top: 140,
+                                left: 40,
+                                child: Text(
+                                  listPemain.secondNama,
+                                  style: TextStyle(
+                                    fontSize: 35,
+                                    fontWeight: FontWeight.bold,
+                                    fontFamily: "Lato",
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                              Positioned(
+                                left: 190,
+                                top: 30,
+                                child: Image.asset(
+                                  listPemain.image,
+                                  height: 300,
+                                  width: 200,
+                                ),
+                              ),
+                              Positioned(
+                                top: 250,
+                                child: Image.asset(
+                                  listPemain.jersy,
+                                  color: Colors.white,
+                                  height: 60,
+                                ),
+                              ),
+                              Positioned(
+                                top: 270,
+                                left: 50,
+                                child: Text(
+                                  listPemain.posisi,
+                                  style: TextStyle(
+                                    fontSize: 17,
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontFamily: "Lato",
+                                  ),
+                                ),
+                              ),
+                              Positioned(
+                                top: 320,
+                                child: Container(
+                                  width: 115,
+                                  height: 115,
+                                  decoration: BoxDecoration(
+                                    color:
+                                        const Color.fromARGB(184, 56, 55, 55),
+                                    borderRadius: BorderRadius.circular(15),
+                                    border: Border.all(
+                                      color: Colors.grey,
+                                      width: 0.5,
+                                    ),
+                                  ),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(10.0),
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          'Age',
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.w600,
+                                            fontSize: 15,
+                                            letterSpacing: 1,
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding:
+                                              const EdgeInsets.only(left: 30.0),
+                                          child: Text(
+                                            listPemain.age,
+                                            style: TextStyle(
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.w600,
+                                              fontSize: 28,
+                                              letterSpacing: 1,
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Positioned(
+                                top: 320,
+                                left: 130,
+                                child: Container(
+                                  width: 115,
+                                  height: 115,
+                                  decoration: BoxDecoration(
+                                    color:
+                                        const Color.fromARGB(184, 56, 55, 55),
+                                    borderRadius: BorderRadius.circular(15),
+                                    border: Border.all(
+                                      color: Colors.grey,
+                                      width: 0.5,
+                                    ),
+                                  ),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(10.0),
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          'Games',
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.w600,
+                                            fontSize: 15,
+                                            letterSpacing: 1,
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding:
+                                              const EdgeInsets.only(left: 30.0),
+                                          child: Text(
+                                            listPemain.main,
+                                            style: TextStyle(
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.w600,
+                                              fontSize: 28,
+                                              letterSpacing: 1,
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Positioned(
+                                top: 320,
+                                left: 260,
+                                child: Container(
+                                  width: 115,
+                                  height: 115,
+                                  decoration: BoxDecoration(
+                                    color:
+                                        const Color.fromARGB(184, 56, 55, 55),
+                                    borderRadius: BorderRadius.circular(15),
+                                    border: Border.all(
+                                      color: Colors.grey,
+                                      width: 0.5,
+                                    ),
+                                  ),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(10.0),
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          'Goals',
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.w600,
+                                            fontSize: 15,
+                                            letterSpacing: 1,
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding:
+                                              const EdgeInsets.only(left: 30),
+                                          child: Text(
+                                            listPemain.goals,
+                                            style: TextStyle(
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.w600,
+                                              fontSize: 28,
+                                              letterSpacing: 1,
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ),
                             ],
-                          )
+                          ),
                         ],
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>[
-                          Text(
-                            'JOINED',
-                            style: TextStyle(
-                              color: Colors.grey,
-                              fontSize: 15,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                          Text(
-                            '10 JAN 2020',
-                            style: TextStyle(
-                              fontSize: 21,
-                              color: Colors.red,
-                              fontWeight: FontWeight.bold,
-                              fontFamily: "LibreBaskerville",
-                            ),
-                          ),
-                        ],
-                      ),
-                      Column(
-                        children: <Widget>[
-                          Text(
-                            'UNITED DEBUT',
-                            style: TextStyle(
-                              color: Colors.grey,
-                              fontSize: 15,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                          Text(
-                            '1 FEB 2020',
-                            style: TextStyle(
-                              fontSize: 21,
-                              color: Colors.red,
-                              fontWeight: FontWeight.bold,
-                              fontFamily: "LibreBaskerville",
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Column(
-                        children: <Widget>[
-                          Text(
-                            'JERSY NUMBER',
-                            style: TextStyle(
-                              color: Colors.grey,
-                              fontSize: 15,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                          Text(
-                            listPemain.jersy,
-                            style: TextStyle(
-                              fontSize: 21,
-                              color: Colors.red,
-                              fontWeight: FontWeight.bold,
-                              fontFamily: "LibreBaskerville",
-                            ),
-                          ),
-                        ],
-                      ),
-                      Column(
-                        children: <Widget>[
-                          Text(
-                            'DATE OF BIRTH',
-                            style: TextStyle(
-                              color: Colors.grey,
-                              fontSize: 15,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                          Text(
-                            listPemain.birth,
-                            style: TextStyle(
-                              fontSize: 21,
-                              color: Colors.red,
-                              fontWeight: FontWeight.bold,
-                              fontFamily: "LibreBaskerville",
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-                //Biograpy
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Text(
-                        'BIOGRAPHY',
+                  padding: const EdgeInsets.only(top: 206),
+                  child: Container(
+                    width: 373,
+                    height: 120,
+                    decoration: BoxDecoration(
+                      color: const Color.fromARGB(255, 20, 27, 54),
+                      borderRadius: BorderRadius.only(
+                          bottomLeft: Radius.circular(25),
+                          bottomRight: Radius.circular(25)),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.1),
+                          blurRadius: 1,
+                        ),
+                      ],
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(
+                        '${listPemain.secondNama} said:${listPemain.kata}',
                         style: TextStyle(
-                          color: Colors.grey,
-                          fontSize: 17,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 10.0, right: 10.0),
-                        child: ReadMoreText(
-                          listPemain.biography,
-                          trimLines: 4,
-                          textAlign: TextAlign.justify,
-                          trimMode: TrimMode.Line,
-                          lessStyle: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.blue,
-                          ),
-                          moreStyle: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.red,
-                          ),
-                          style: TextStyle(
-                            fontFamily: "LibreBaskerville",
+                            color: Colors.white,
                             fontSize: 18,
-                          ),
-                        ),
+                            fontWeight: FontWeight.w500),
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Container(
+                  width: 373,
+                  height: 200,
+                  decoration: BoxDecoration(
+                    color: const Color.fromARGB(255, 20, 27, 54),
+                    borderRadius: BorderRadius.circular(25),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.1),
+                        blurRadius: 1,
                       ),
                     ],
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(14.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'ABOUT',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        Divider(
+                          color: Colors.grey,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Column(
+                              children: [
+                                Text(
+                                  'Date of birth',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 19,
+                                  ),
+                                ),
+                                Text(
+                                  listPemain.birth,
+                                  style: TextStyle(
+                                      color: Colors.red,
+                                      fontSize: 21,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ],
+                            ),
+                            Column(
+                              children: [
+                                Text(
+                                  'Join Club',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 19,
+                                  ),
+                                ),
+                                Text(
+                                  listPemain.join,
+                                  style: TextStyle(
+                                      color: Colors.red,
+                                      fontSize: 21,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ],

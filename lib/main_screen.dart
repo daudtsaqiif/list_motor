@@ -42,6 +42,7 @@ class MainScreen extends StatelessWidget {
                     child: Column(
                       children: <Widget>[
                         Stack(
+                          clipBehavior: Clip.none,
                           children: <Widget>[
                             Container(
                               width: 340,
@@ -49,12 +50,6 @@ class MainScreen extends StatelessWidget {
                               decoration: BoxDecoration(
                                 color: const Color.fromARGB(255, 14, 9, 33),
                                 borderRadius: BorderRadius.circular(20),
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: Colors.red,
-                                    blurRadius: 4,
-                                  ),
-                                ],
                               ),
                             ),
                             Positioned(
@@ -85,8 +80,8 @@ class MainScreen extends StatelessWidget {
                               ),
                             ),
                             Positioned(
-                              top: 50,
-                              left: 240,
+                              top: 55,
+                              left: 250,
                               child: Image.asset(
                                 listPemain.image,
                                 height: 150,
