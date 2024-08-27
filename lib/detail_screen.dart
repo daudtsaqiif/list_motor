@@ -35,11 +35,14 @@ class DetailScreen extends StatelessWidget {
                               Positioned(
                                 left: 40,
                                 top: 50,
-                                child: CountryFlag.fromCountryCode(
-                                  'pt',
-                                  width: 40,
-                                  height: 20,
-                                  shape: Circle(),
+                                child: ClipOval(
+                                  child: SizedBox.fromSize(
+                                    size: Size.fromRadius(20), // Image radius
+                                    child: Image.asset(
+                                      listPemain.negara,
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
                                 ),
                               ),
                               Positioned(
@@ -309,14 +312,16 @@ class DetailScreen extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.all(14.0),
                     child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
-                          'ABOUT',
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold),
+                        Padding(
+                          padding: const EdgeInsets.only(right: 250.0),
+                          child: Text(
+                            'ABOUT',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold),
+                          ),
                         ),
                         Divider(
                           color: Colors.grey,
@@ -362,9 +367,73 @@ class DetailScreen extends StatelessWidget {
                             ),
                           ],
                         ),
+                        Column(
+                          children: [
+                            Text(
+                              'Debut',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 19,
+                              ),
+                            ),
+                            Text(
+                              listPemain.debut,
+                              style: TextStyle(
+                                  color: Colors.red,
+                                  fontSize: 21,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ],
+                        ),
                       ],
                     ),
                   ),
+                ),
+                SizedBox(
+                  height: 15,
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                      child: Text(
+                        'BIOGRAPHY',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                      child: Divider(
+                        color: Colors.white,
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 20),
+                      child: ReadMoreText(
+                        listPemain.biography,
+                        trimLines: 4,
+                        textAlign: TextAlign.justify,
+                        trimMode: TrimMode.Line,
+                        lessStyle: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.blue,
+                        ),
+                        moreStyle: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.red,
+                        ),
+                        style: TextStyle(
+                            fontFamily: "LibreBaskerville",
+                            fontSize: 18,
+                            color: Colors.white),
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),

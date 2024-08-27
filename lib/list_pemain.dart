@@ -46,7 +46,7 @@ var pemain = [
     kata:
         '"For me, it’s a big honour. It’s a big privilege to be part of this big club, part of this family."',
     posisi: 'GoalKeeper(GK)',
-    negara: 'Cameroon',
+    negara: 'assets/images/cameroon.png',
     join: '20 JUL 2023',
     debut: '27 JUL 2023',
     jersy: 'assets/images/24.png',
@@ -65,7 +65,7 @@ var pemain = [
     kata:
         'worked so hard to get to this moment and, now that I’m here, I’m going to push myself even further."',
     posisi: 'Defender(CB)',
-    negara: 'Argentina',
+    negara: 'assets/images/argentina.png',
     join: '27 JUL 2022',
     debut: '7 AUG 2022',
     jersy: 'assets/images/6.png',
@@ -84,7 +84,7 @@ var pemain = [
     kata:
         '"Whilst I know that I am still young and will continue to develop, I can promise the United fans that I will leave everything on"',
     posisi: 'Defender(LB)',
-    negara: 'Netherlands',
+    negara: 'assets/images/belanda.png',
     join: '5 JUL 2022',
     debut: '7 FUG 2022',
     jersy: 'assets/images/12.png',
@@ -103,7 +103,7 @@ var pemain = [
     kata:
         '"I will give everything for this club, for this shirt and, hopefully, help the club to win. That’s the most important"',
     posisi: 'Defender(RB)',
-    negara: 'Portugal',
+    negara: 'assets/images/portugal.png',
     join: '6 JUN 2018',
     debut: '27 JUN 2018',
     jersy: 'assets/images/20.png',
@@ -122,7 +122,7 @@ var pemain = [
     kata:
         '"To play for United feels incredible. I can promise the fans I will give everything to help bring us success."',
     posisi: 'Midfilders(CAM)',
-    negara: 'Portugal',
+    negara: 'assets/images/portugal.png',
     join: '30 JAN 2020',
     debut: '1 FEB 2020',
     jersy: 'assets/images/8.png',
@@ -141,7 +141,7 @@ var pemain = [
     kata:
         '"I couldn’t be more excited for the seasons ahead and am ready for the hard work expected here."',
     posisi: 'Midfilders(CAM)',
-    negara: 'England',
+    negara: 'assets/images/inggris.png',
     join: '5 JUL 2023',
     debut: '14 AUG 2023',
     jersy: 'assets/images/7.png',
@@ -160,7 +160,7 @@ var pemain = [
     kata:
         '"To represent United is an honour and I am ready to give everything to help the team achieve our ambitions."',
     posisi: 'Midfilders(CDM)',
-    negara: 'Brazil',
+    negara: 'assets/images/brazil.png',
     join: '22 AUG 2022',
     debut: '27 AUG 2022',
     jersy: 'assets/images/18.png',
@@ -179,7 +179,7 @@ var pemain = [
     kata:
         '"I want to bleed for this jersey, and I want to win some trophies. That’s why I came here."',
     posisi: 'Forward(ST)',
-    negara: 'Denmark',
+    negara: 'assets/images/denmark.png',
     join: '5 AUG 2023',
     debut: '3 SEP 2023',
     jersy: 'assets/images/9.png',
@@ -198,7 +198,7 @@ var pemain = [
     kata:
         '"I have always been a United fan, so to be playing in the first team really is a dream come true."',
     posisi: 'Forward(LW)',
-    negara: 'England',
+    negara: 'assets/images/inggris.png',
     join: '1 JUL 2014',
     debut: '25 FEB 2016',
     jersy: 'assets/images/10.png',
@@ -216,7 +216,7 @@ var pemain = [
     goals: '16',
     kata: 'Garnaco didnt said anything',
     posisi: 'Forward(LW)',
-    negara: 'Argentina',
+    negara: 'assets/images/argentina.png',
     join: '11 SEP 2020',
     debut: '-',
     jersy: 'assets/images/17.png',
