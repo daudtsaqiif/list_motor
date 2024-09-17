@@ -3,7 +3,10 @@ import 'package:list_motor/detail_screen.dart';
 import 'package:list_motor/list_pemain.dart';
 
 class MainScreen extends StatelessWidget {
-  const MainScreen({super.key});
+  const MainScreen({super.key, this.username, this.password});
+
+  final String? username;
+  final String? password;
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +15,7 @@ class MainScreen extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: const Color.fromARGB(255, 223, 42, 29),
           title: const Text(
-            'Mancester United Players Man',
+            'Top 10 Manchester United Players',
             style: TextStyle(
               color: Colors.white,
               fontWeight: FontWeight.bold,
@@ -21,13 +24,47 @@ class MainScreen extends StatelessWidget {
             ),
           ),
         ),
+        drawer: Drawer(
+          child: ListView(
+            padding: EdgeInsets.zero,
+            children: <Widget>[
+              UserAccountsDrawerHeader(
+                accountName: Text('UserName: ${username ?? 'Guest'}'),
+                accountEmail: Text('Your password: ${password ?? 'No Password'}'),
+                currentAccountPicture: CircleAvatar(
+                  backgroundColor: Colors.white,
+                  child: Icon(
+                    Icons.person,
+                    size: 50,
+                    color: Colors.red,
+                  ),
+                ),
+                decoration: BoxDecoration(
+                  color: const Color.fromARGB(255, 223, 42, 29),
+                ),
+              ),
+              ListTile(
+                leading: Icon(Icons.home),
+                title: Text('Home'),
+                onTap: () {},
+              ),
+              ListTile(
+                leading: Icon(Icons.logout),
+                title: Text('Logout'),
+                onTap: () {
+                  Navigator.pushNamed(context, '/login');
+                },
+              ),
+            ],
+          ),
+        ),
         body: SafeArea(
           child: ListView.builder(
             itemBuilder: (BuildContext context, index) {
               final ListPemain listPemain = pemain[index];
               return InkWell(
                 onTap: () {
-                  print('Card Cliked');
+                  print('Card Clicked');
                   Navigator.push(
                     context,
                     MaterialPageRoute(

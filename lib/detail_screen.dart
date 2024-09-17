@@ -1,4 +1,3 @@
-import 'package:country_flags/country_flags.dart';
 import 'package:flutter/material.dart';
 import 'package:list_motor/list_pemain.dart';
 import 'package:readmore/readmore.dart';
@@ -26,18 +25,21 @@ class DetailScreen extends StatelessWidget {
                             clipBehavior: Clip.none,
                             alignment: Alignment.topLeft,
                             children: [
+                              // Background image or design
                               Positioned(
                                 child: Image.asset(
                                   listPemain.secondImage,
                                   color: const Color.fromARGB(106, 127, 68, 68),
                                 ),
                               ),
+                              // Negara flag in oval shape
                               Positioned(
                                 left: 40,
                                 top: 50,
                                 child: ClipOval(
                                   child: SizedBox.fromSize(
-                                    size: Size.fromRadius(20), // Image radius
+                                    size: const Size.fromRadius(
+                                        20), // Image radius
                                     child: Image.asset(
                                       listPemain.negara,
                                       fit: BoxFit.cover,
@@ -45,6 +47,7 @@ class DetailScreen extends StatelessWidget {
                                   ),
                                 ),
                               ),
+                              // Second image of the player
                               Positioned(
                                 left: 5,
                                 top: 50,
@@ -53,11 +56,12 @@ class DetailScreen extends StatelessWidget {
                                   width: 43,
                                 ),
                               ),
+                              // Player name
                               Positioned(
                                 top: 100,
                                 child: Text(
                                   listPemain.nama,
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                     fontSize: 35,
                                     fontWeight: FontWeight.bold,
                                     fontFamily: "Lato",
@@ -65,12 +69,13 @@ class DetailScreen extends StatelessWidget {
                                   ),
                                 ),
                               ),
+                              // Player second name
                               Positioned(
                                 top: 140,
                                 left: 40,
                                 child: Text(
                                   listPemain.secondNama,
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                     fontSize: 35,
                                     fontWeight: FontWeight.bold,
                                     fontFamily: "Lato",
@@ -78,6 +83,7 @@ class DetailScreen extends StatelessWidget {
                                   ),
                                 ),
                               ),
+                              // Player image
                               Positioned(
                                 left: 190,
                                 top: 30,
@@ -87,6 +93,7 @@ class DetailScreen extends StatelessWidget {
                                   width: 200,
                                 ),
                               ),
+                              // Jersey image
                               Positioned(
                                 top: 250,
                                 child: Image.asset(
@@ -95,12 +102,13 @@ class DetailScreen extends StatelessWidget {
                                   height: 60,
                                 ),
                               ),
+                              // Player position text
                               Positioned(
                                 top: 270,
                                 left: 50,
                                 child: Text(
                                   listPemain.posisi,
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                     fontSize: 17,
                                     color: Colors.white,
                                     fontWeight: FontWeight.bold,
@@ -108,6 +116,21 @@ class DetailScreen extends StatelessWidget {
                                   ),
                                 ),
                               ),
+                              // Tombol kembali di bagian atas
+                              Positioned(
+                                top: -10,
+                                left: -10,
+                                child: IconButton(
+                                  icon: const Icon(
+                                    Icons.arrow_back,
+                                    color: Colors.white,
+                                  ),
+                                  onPressed: () {
+                                    Navigator.pop(context);
+                                  },
+                                ),
+                              ),
+                              // Age Container
                               Positioned(
                                 top: 320,
                                 child: Container(
@@ -130,7 +153,7 @@ class DetailScreen extends StatelessWidget {
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
                                       children: [
-                                        Text(
+                                        const Text(
                                           'Age',
                                           style: TextStyle(
                                             color: Colors.white,
@@ -144,7 +167,7 @@ class DetailScreen extends StatelessWidget {
                                               const EdgeInsets.only(left: 30.0),
                                           child: Text(
                                             listPemain.age,
-                                            style: TextStyle(
+                                            style: const TextStyle(
                                               color: Colors.white,
                                               fontWeight: FontWeight.w600,
                                               fontSize: 28,
@@ -157,6 +180,7 @@ class DetailScreen extends StatelessWidget {
                                   ),
                                 ),
                               ),
+                              // Games Container
                               Positioned(
                                 top: 320,
                                 left: 130,
@@ -180,7 +204,7 @@ class DetailScreen extends StatelessWidget {
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
                                       children: [
-                                        Text(
+                                        const Text(
                                           'Games',
                                           style: TextStyle(
                                             color: Colors.white,
@@ -194,7 +218,7 @@ class DetailScreen extends StatelessWidget {
                                               const EdgeInsets.only(left: 30.0),
                                           child: Text(
                                             listPemain.main,
-                                            style: TextStyle(
+                                            style: const TextStyle(
                                               color: Colors.white,
                                               fontWeight: FontWeight.w600,
                                               fontSize: 28,
@@ -207,6 +231,7 @@ class DetailScreen extends StatelessWidget {
                                   ),
                                 ),
                               ),
+                              // Goals Container
                               Positioned(
                                 top: 320,
                                 left: 260,
@@ -230,7 +255,7 @@ class DetailScreen extends StatelessWidget {
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
                                       children: [
-                                        Text(
+                                        const Text(
                                           'Goals',
                                           style: TextStyle(
                                             color: Colors.white,
@@ -244,7 +269,7 @@ class DetailScreen extends StatelessWidget {
                                               const EdgeInsets.only(left: 30),
                                           child: Text(
                                             listPemain.goals,
-                                            style: TextStyle(
+                                            style: const TextStyle(
                                               color: Colors.white,
                                               fontWeight: FontWeight.w600,
                                               fontSize: 28,
