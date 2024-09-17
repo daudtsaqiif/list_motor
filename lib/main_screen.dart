@@ -44,11 +44,6 @@ class MainScreen extends StatelessWidget {
                 ),
               ),
               ListTile(
-                leading: Icon(Icons.home),
-                title: Text('Home'),
-                onTap: () {},
-              ),
-              ListTile(
                 leading: Icon(Icons.logout),
                 title: Text('Logout'),
                 onTap: () {

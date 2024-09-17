@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:list_motor/detail_screen.dart';
 import 'package:list_motor/login_screen.dart';
 import 'package:list_motor/main_screen.dart';
 
